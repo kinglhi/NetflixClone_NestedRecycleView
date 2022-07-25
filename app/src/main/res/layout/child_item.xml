@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--    scalable framlayout that holds child views
+    multiple framelayouts beside each other so as not to overlap the views -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--    cardview that holds the elements of the child RecyclerView-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--    image within the cardview. All images will be same since
+                    image source is defined here instead of the Kotlin Code-->
+            <ImageView
+                android:id="@+id/img_child_item"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:contentDescription="@+id/child_item_title"
+                android:scaleType="centerCrop"
+                android:clickable="true"
+                android:focusable="true"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</FrameLayout>
